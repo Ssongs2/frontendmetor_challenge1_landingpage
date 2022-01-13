@@ -1,3 +1,6 @@
+# frontendmetor_challenge1_landingpage
+This project is to build out the landing page with HTML, CSS
+
 # Frontend Mentor - Clipboard landing page
 
 ![Design preview for the Clipboard landing page coding challenge](./design/desktop-preview.jpg)
