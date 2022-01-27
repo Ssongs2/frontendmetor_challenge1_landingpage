@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Clipboard landing page</title>
 
@@ -24,15 +24,8 @@
       color: hsl(228, 45%, 44%);
     }
 
-    @font-face {
-      font-family: 'Bai Jamjuree';
-      src: url('https://fonts.google.com/specimen/Bai+Jamjuree');
-    }
-
     body {
-      font-family: 'Bai Jamjuree';
-      font-size: 18px;
-      font-weight: 600;
+      font-family: 'Bai Jamjuree', sans-serif;
     }
 
     .main {
@@ -40,10 +33,12 @@
     }
 
     .btn {
-      border: 0;
       border-radius: 30px;
       width: 180px;
       height: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
     }
 
     .flex-container {
@@ -74,6 +69,7 @@
 
     .title {
       font-size: 30px;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
@@ -90,7 +86,7 @@
     .babyContent {
       color: hsl(201, 11%, 66%);
     }
-    
+
     #logoImg {
       width: 50px;
       height: 50px;
@@ -110,6 +106,7 @@
 
     .footer-img:hover {
       color: khaki;
+      background-color: hsl(201, 11%, 66%);
     }
 
     .footer {
@@ -117,15 +114,50 @@
       height: 200px;
       background-color: hsl(201, 11%, 66%);
     }
+
+    .vertical {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vertical-first {
+      margin-bottom: 10px;
+    }
+
+    .item-char:hover {
+      color: hsl(171, 66%, 44%);
+    }
+
+    .footer-img:hover {
+      color: hsl(171, 66%, 44%);
+    }
+
+    .btn_cyan {
+      border: 1px solid hsl(171, 66%, 44%);
+      background-color: hsl(171, 66%, 44%);
+      box-shadow: 0 4px 10px 0 hsl(171, 66%, 44%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-shadow: 0px 1px 0px hsl(171, 66%, 44%);
+
+    }
+
+    .btn_blue {
+      border: 1px solid hsl(233, 100%, 69%);
+      background-color: hsl(233, 100%, 69%);
+      box-shadow: 0 4px 10px 0 hsl(233, 100%, 69%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-shadow: 0px 1px 0px hsl(233, 100%, 69%);
+    }
+
+    
   </style>
 </head>
 
 <body>
   <main>
     <header>
-      <div style="position: relative;">
+      <div style="position: relative; width: 1440px;">
         <img src="images/bg-header-desktop.png">
-        <div style="position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div style="position:absolute; top: 50%; left: 50%;">
           <img src="images/logo.svg" />
         </div>
       </div>
@@ -134,19 +166,22 @@
       <div>
         <div class="main-item" style="height: 350px;">
           <div style="color: hsl(210, 10%, 33%);">
-            <div>A history of everything you copy</div>
-            <div>
+            <div class="title">A history of everything you copy</div>
+            <div class="content">
               Clipboard allows you to track and organize everything you copy. Instantly <br />
               access your Clipboard on all your devices
             </div>
           </div>
-          <button class="btn" style="color:white; 
-                background-color: hsl(171, 66%, 44%); 
-                box-shadow: 0 4px 10px 0 hsl(171, 66%, 44%), 0 6px 20px 0 rgba(0,0,0,0.19)">
-            Download for iOS</button>
-          <button class="btn"
-            style="color:white; background-color: hsl(233, 100%, 69%); border-color: hsl(233, 100%, 69%);">Download for
-            Mac</button>
+          <div>
+            <div style="display: inline-block; margin-right: 10px;">
+              <button class="btn btn_cyan">
+                Download for iOS</button>
+            </div>
+            <div style="display: inline-block;">
+              <button class="btn btn_blue">
+                Download for Mac</button>
+            </div>
+          </div>
         </div>
         <div class="main-item" style="height: 900px;">
           <div style="color: hsl(210, 10%, 33%);">
@@ -234,41 +269,48 @@
             Avalilable for free on the App Store. Download for Mac or iOS. sync with iCloud and <br />
             you're ready to start adding to your clipboard
           </div>
-          <button class="btn" style="color:white; 
-          background-color: hsl(171, 66%, 44%); 
-          box-shadow: 0 4px 10px 0 hsl(171, 66%, 44%), 0 6px 20px 0 rgba(0,0,0,0.19)">
-      Download for iOS</button>
-    <button class="btn"
-      style="color:white; background-color: hsl(233, 100%, 69%); border-color: hsl(233, 100%, 69%);">Download for
-      Mac</button>
-        </div>
-      </div>
+          <div>
+            <div style="display: inline-block; margin-right: 10px;">
+              <button class="btn btn_cyan">
+                Download for iOS</button>
+            </div>
+            <div style="display: inline-block;">
+              <button class="btn btn_blue">
+                Download for Mac</button>
+            </div>
+          </div>
   </main>
   <footer>
     <div class="footer">
       <div class="flex-container" style="height: inherit;">
-        <div class="flex-item logoImg"><img src="images/logo.svg" id="logoImg" ></div>
+        <div class="flex-item logoImg"><img src="images/logo.svg" id="logoImg"></div>
         <div class="flex-item">
-          <div class="flex-container" style="height: inherit;" >
-            <div class="flex-item">
-              <div>FAQs</div>
-              <div>Contact Us</div>
+          <div class="flex-container" style="height: inherit;">
+            <div class="flex-item vertical">
+              <div>
+                <div class="vertical-first item-char">FAQs</div>
+                <div class="item-char">Contact Us</div>
+              </div>
             </div>
-            <div class="flex-item">
-              <div>Privacy Policy</div>
-              <div>Press Kit</div>
+            <div class="flex-item vertical">
+              <div>
+                <div class="vertical-first item-char">Privacy Policy</div>
+                <div class="item-char">Press Kit</div>
+              </div>
             </div>
-            <div class="flex-item">
-              <div>Install Guide</div>
+            <div class="flex-item vertical">
+              <div style="height: 56px;">
+                <div class="item-char">Install Guide</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="flex-item">
           <div id="wrap-img">
-          <img class="footer-img" src="images/icon-facebook.svg"/>
-          <img class="footer-img" src="images/icon-twitter.svg"/>
-          <img class="footer-img" src="images/icon-instagram.svg"/>
-        </div>
+            <img class="footer-img" src="images/icon-facebook.svg" />
+            <img class="footer-img" src="images/icon-twitter.svg" />
+            <img class="footer-img" src="images/icon-instagram.svg" />
+          </div>
         </div>
       </div>
     </div>
